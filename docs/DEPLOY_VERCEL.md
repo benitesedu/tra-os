@@ -11,7 +11,9 @@ a compilar somente o Play.
 3. Use o framework `Next.js`.
 4. Não configure `outputDirectory`; o runtime Next.js da Vercel deve gerenciar
    as rotas server-rendered e a API.
-5. O build será executado por `npm run build -w @tracos/play`.
+5. O build será executado por `node scripts/vercel-build.mjs`, que compila o
+   Play e copia o resultado para `.next` na raiz, como exigido pelo builder da
+   Vercel.
 
 O Studio não é publicado junto com o Play. Se for necessário publicá-lo,
 crie um segundo projeto Vercel apontando para o mesmo repositório e altere o
