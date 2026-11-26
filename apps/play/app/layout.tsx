@@ -10,8 +10,8 @@ const ogImage = `${siteUrl}/og-image.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'TRAÇOS — Nem tudo precisa estar desenhado.',
-  description: 'Um novo desafio por dia.',
+  title: 'Traços — O desafio diário dos traços',
+  description: 'Observe. Imagine. Descubra. Você consegue desvendar o desenho de hoje?',
   alternates: {
     languages: {
       'pt-BR': siteUrl,
@@ -20,19 +20,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'TRAÇOS — Nem tudo precisa estar desenhado.',
-    description: 'Um novo desafio por dia.',
+    title: 'Traços — O desafio diário dos traços',
+    description: 'Observe. Imagine. Descubra. Você consegue desvendar o desenho de hoje?',
     url: siteUrl,
     siteName: 'TRAÇOS',
     locale: 'pt_BR',
     alternateLocale: ['en_US', 'es_ES'],
     type: 'website',
-    images: [{ url: ogImage, width: 1200, height: 630, type: 'image/png', alt: 'TRAÇOS — Nem tudo precisa estar desenhado. Um novo desafio por dia.' }],
+    images: [{ url: ogImage, width: 1200, height: 630, type: 'image/png', alt: 'Traços — O desafio diário dos traços.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TRAÇOS — Nem tudo precisa estar desenhado.',
-    description: 'Um novo desafio por dia.',
+    title: 'Traços — O desafio diário dos traços',
+    description: 'Observe. Imagine. Descubra. Você consegue desvendar o desenho de hoje?',
     images: [ogImage],
   },
 };
