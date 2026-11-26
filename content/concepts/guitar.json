@@ -1,0 +1,9 @@
+{
+  "id": "guitar",
+  "category": "general",
+  "translations": {
+    "pt": "Violão",
+    "en": "Guitar",
+    "es": "Guitarra"
+  }
+}

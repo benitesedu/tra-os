@@ -1,0 +1,9 @@
+{
+  "id": "compass",
+  "category": "general",
+  "translations": {
+    "pt": "Bússola",
+    "en": "Compass",
+    "es": "Brújula"
+  }
+}

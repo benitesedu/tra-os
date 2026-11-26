@@ -1,0 +1,9 @@
+{
+  "id": "train",
+  "category": "general",
+  "translations": {
+    "pt": "Trem",
+    "en": "Train",
+    "es": "Tren"
+  }
+}

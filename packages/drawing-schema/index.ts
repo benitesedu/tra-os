@@ -1,0 +1,1 @@
+export type Drawing={schemaVersion:number;viewBox:number[];layers:{type:string;d:string}[][]};

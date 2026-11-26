@@ -1,0 +1,16 @@
+{
+  "name": "@tracos/play",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@supabase/supabase-js": "^2.49.0",
+    "lucide-react": "^1.81.0",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

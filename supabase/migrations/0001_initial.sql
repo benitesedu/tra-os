@@ -1,0 +1,10 @@
+create schema if not exists private;
+create table private.concepts(id text primary key, category text not null);
+create table private.concept_translations(concept_id text references private.concepts(id), locale text not null, answer text not null, accepted_answers text[] default '{}', primary key(concept_id,locale));
+create table private.drawings(id uuid primary key default gen_random_uuid(), concept_id text not null references private.concepts(id), version int not null default 1, drawing_data jsonb not null, status text not null default 'draft' check(status in ('draft','approved','archived')), unique(concept_id,version), unique(id,concept_id));
+create table private.daily_challenges(id uuid primary key default gen_random_uuid(), challenge_date date not null, locale text not null, concept_id text not null, drawing_id uuid not null, foreign key(drawing_id,concept_id) references private.drawings(id,concept_id), unique(challenge_date,locale),unique(challenge_date,concept_id));
+create table public.profiles(id uuid primary key references auth.users(id) on delete cascade, nickname text not null, country char(2), preferences jsonb not null default '{}');
+create table private.game_sessions(id uuid primary key default gen_random_uuid(), user_id uuid references auth.users(id) on delete cascade, challenge_id uuid not null references private.daily_challenges(id), hints int not null default 0 check(hints between 0 and 4), errors int not null default 0 check(errors between 0 and 5), points int check(points between 0 and 100), completed_at timestamptz, unique(user_id,challenge_id));
+alter table public.profiles enable row level security;
+create policy own_profile on public.profiles for all to authenticated using(auth.uid()=id) with check(auth.uid()=id);
+revoke all on schema private from public,anon,authenticated;

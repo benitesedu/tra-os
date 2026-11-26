@@ -1,0 +1,9 @@
+{
+  "id": "sailboat",
+  "category": "general",
+  "translations": {
+    "pt": "Veleiro",
+    "en": "Sailboat",
+    "es": "Velero"
+  }
+}

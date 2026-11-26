@@ -1,0 +1,1 @@
+export function normalize(s:string):string; export function score(h:number,e:number,won:boolean):number; export const locales:string[]; export function dailyIndex(day:string,locale:string,count:number):number;

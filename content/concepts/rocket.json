@@ -1,0 +1,9 @@
+{
+  "id": "rocket",
+  "category": "general",
+  "translations": {
+    "pt": "Foguete",
+    "en": "Rocket",
+    "es": "Cohete"
+  }
+}

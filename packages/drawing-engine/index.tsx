@@ -1,0 +1,2 @@
+import type {Drawing} from '../drawing-schema';
+export function DrawingView({drawing,level}:{drawing:Drawing;level:number}){return <svg className="drawing" viewBox={drawing.viewBox.join(' ')} aria-label="Drawing" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">{drawing.layers.slice(0,level).flatMap((layer,i)=>layer.map((p,k)=><path className="stroke" key={`${i}-${k}`} d={p.d} pathLength={1}/>))}</svg>}

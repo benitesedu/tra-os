@@ -1,0 +1,9 @@
+{
+  "id": "bicycle",
+  "category": "general",
+  "translations": {
+    "pt": "Bicicleta",
+    "en": "Bicycle",
+    "es": "Bicicleta"
+  }
+}
